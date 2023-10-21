@@ -60,8 +60,8 @@ std::vector<cv::KeyPoint> ImageUtil::detKeypoints(cv::Mat& img)
     }
     else if (detector_type == DetectorType::AKAZE)
       detector = cv::AKAZE::create();
-    else if (detector_type == DetectorType::SIFT)
-      detector = cv::SIFT::create();
+    // else if (detector_type == DetectorType::SIFT)
+      // detector = cv::SIFT::create();
     else
     {
       std::cerr << "Detector is not implemented" << std::endl;
@@ -188,7 +188,7 @@ cv::Mat ImageUtil::descKeypoints(std::vector<cv::KeyPoint>& keypoints, cv::Mat& 
   }
   else if (descriptor_type == DescriptorType::SIFT)
   {
-    extractor = cv::SIFT::create();
+    // extractor = cv::SIFT::create();
   }
   else
   {

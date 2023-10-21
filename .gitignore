@@ -70,3 +70,4 @@ package.json
 data/
 src/vloam_main/bags
 KITTI_odometry_evaluation_tool
+src/vloam_main/results/2011_09_26_drive_0011

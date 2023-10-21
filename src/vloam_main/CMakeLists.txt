@@ -8,11 +8,11 @@ add_compile_options(-std=c++14 -O3)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 
-find_package(OpenCV 4.5.1 REQUIRED)
+find_package(OpenCV 4.2.0 REQUIRED)
 
 # find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
-find_package(PCL 1.2 REQUIRED)
+find_package(PCL 1.10 REQUIRED)
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
@@ -26,6 +26,7 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   sensor_msgs
   geometry_msgs
+  message_generation
   # tf2
   tf2_ros
   tf2_geometry_msgs

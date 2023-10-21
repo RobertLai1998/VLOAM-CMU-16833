@@ -8,9 +8,9 @@ add_compile_options(-std=c++14 -O3)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(OpenCV 4.5.1)
+find_package(OpenCV 4.2.0)
 
-find_package(PCL 1.2 REQUIRED)
+find_package(PCL 1.10 REQUIRED)
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
@@ -156,7 +156,7 @@ set_target_properties(point_cloud_util PROPERTIES PUBLIC_HEADER include/${PROJEC
 add_library(visual_odometry SHARED
   src/visual_odometry.cpp
 )
-target_link_libraries(visual_odometry 
+target_link_libraries(visual_odometry
     ${catkin_LIBRARIES}
     ${OpenCV_LIBS}
     Eigen3::Eigen
@@ -220,7 +220,7 @@ set_target_properties(visual_odometry PROPERTIES PUBLIC_HEADER include/${PROJECT
 install(
   DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-  FILES_MATCHING 
+  FILES_MATCHING
     PATTERN "*.hpp"
     PATTERN "*.h"
 #   PATTERN ".svn" EXCLUDE
